@@ -13,22 +13,25 @@ import javax.jws.WebParam;
  *
  * @author lesterod
  */
-@WebService(serviceName = "WS1")
+@WebService(serviceName = "NewWebService")
 public class WS1 {
 
     /**
      * This is a sample web service operation
      */
     @WebMethod(operationName = "hello")
-    public String hello(@WebParam(name = "nombre") String nombre,@WebParam(name = "edad") int edad) {
-        return "Hello " + nombre +edad+ " !";
+    
+    public String hello(@WebParam(name = "name") String txt) {
+        return "Hello " + txt + " !";
     }
     
     /**
-     * metodo suma
+     * servicio suma
      */
     @WebMethod(operationName = "suma")
-    public int suma(@WebParam(name = "num1")int num1,@WebParam(name = "num2") int num2) {
+    
+    public int suma(@WebParam(name = "num1") int num1,@WebParam(name = "num2") int num2) {
         return num1+num2;
     }
+    
 }
