@@ -23,4 +23,12 @@ public class WS1 {
     public String hello(@WebParam(name = "nombre") String nombre,@WebParam(name = "edad") int edad) {
         return "Hello " + nombre +edad+ " !";
     }
+    
+    /**
+     * metodo suma
+     */
+    @WebMethod(operationName = "suma")
+    public int suma(@WebParam(name = "num1")int num1,@WebParam(name = "num2") int num2) {
+        return num1+num2;
+    }
 }
